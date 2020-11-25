@@ -18,3 +18,9 @@ class TestViews(TestCase):
         products = response.json
         self.assertIsInstance(products, dict)
         print(products)
+
+    def delete_one_product(self):
+        response = self.client.delete("/api/v1/products/1")
+        products = response.json
+        self.assertIsInstance(products, dict)
+        print(products)
