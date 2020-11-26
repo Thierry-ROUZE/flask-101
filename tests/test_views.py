@@ -20,7 +20,7 @@ class TestViews(TestCase):
         print(products)
 
     def delete_one_product(self):
-        response = self.client.delete("/api/v1/products/1")
+        response = self.client.delete("/api/v1/products/")
         products = response.json
         self.assertIsInstance(products, dict)
         print(products)
